@@ -84,8 +84,8 @@ def simulation(node):
         # Filter moves to find captures
         capture_check_moves = [move for move in legal_moves if temp_state.is_capture(move) or temp_state.gives_check(move)]
         
-        capture_check_probability = 0.75 #0.90
-
+        capture_check_probability = 0.95 #0.90
+        
         if capture_check_moves and random.random() < capture_check_probability:
             selected_move = random.choice(capture_check_moves)
         else:
